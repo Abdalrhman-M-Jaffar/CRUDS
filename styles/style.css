@@ -1,0 +1,374 @@
+@font-face {
+    font-family: h-f;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: b-f;
+    src: url(../fonts/PlaywriteDEGrund-Regular.ttf);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Header styling */
+
+body{
+    margin: 0;
+    font-family: b-f;
+    background-color: #333;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.header-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+    height: max-content;
+}
+
+.header-text{
+    font-size: 1.2rem;
+    color: #FFF;
+    transition: all .5s;
+    text-align: center;
+}
+
+.logo{
+    font-size: 1.8rem;
+    color: #FFF;
+    transition: all .5s;
+    text-align: center;
+}
+
+
+
+/* Main container styling */
+
+.main-con{
+    display: flex;
+    justify-content: center;
+}
+
+.main-con-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    padding: 20px 10%;
+    height: max-content;
+}
+
+.title-input, .count-input, .category-input{
+    font-family: b-f;
+    width: 100%;
+    padding-left: 10px;
+    height: 40px;
+    font-size: 18px;
+    outline: none;
+    background-color: transparent;
+    color: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.title-input::placeholder, .count-input::placeholder, .category-input::placeholder{
+    color: #bbb;
+}
+
+.prices, .search{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.prices input, .search input{
+    font-family: b-f;
+    width: 100%;
+    padding-left: 10px;
+    height: 40px;
+    font-size: 18px;
+    outline: none;
+    background-color: transparent;
+    color: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.prices input::placeholder, .search input::placeholder{
+    color: #bbb;
+}
+
+.total-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color: #333;
+    background-color: #ff6464; /* true state : #64ff96 */
+    padding: 3px;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.count-input{
+    margin-top: 10px;
+}
+
+.category-input{
+    margin-top: 5px;
+}
+
+.create-btn{
+    font-family: b-f;
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 50px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffa0;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.create-btn:hover{
+    color: #ffffa0;
+    border: 2px solid #ffffa0;
+    background-color: transparent;
+}
+
+.create-btn:active{
+    transform:  translateY(2px);
+}
+
+.search-by-title{
+    opacity: 1;
+    z-index: 99;
+}
+
+.search-by-category{
+    opacity: 0;
+    margin-top: -50px;
+    z-index: 98;
+}
+
+.search-type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.search-type button{
+    font-family: b-f;
+    width: 45%;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 50px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffa0;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.search-type button:hover{
+    color: #ffffa0;
+    border: 2px solid #ffffa0;
+    background-color: transparent;
+}
+
+.search-type button:active{
+    transform:  translateY(2px);
+}
+
+.delete-btn{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: b-f;
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 50px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffa0;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.delete-btn:hover{
+    color: #ffffa0;
+    border: 2px solid #ffffa0;
+    background-color: transparent;
+}
+
+.delete-btn:active{
+    transform:  translateY(2px);
+}
+
+
+/* Footer Styling */
+
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.footer-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    color: white;
+}
+
+.information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: b-f;
+}
+
+.information-titles{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: h-f;
+}
+
+.information td{
+    text-align: center;
+    padding: 5px 5px;
+}
+
+tr button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: b-f;
+    width: 100%;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 50px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffa0;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+tr button:hover{
+    color: #ffffa0;
+    border: 2px solid #ffffa0;
+    background-color: transparent;
+}
+
+tr button:active{
+    transform:  translateY(2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:800px) {
+    
+.search-type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.search-type button{
+    font-family: b-f;
+    width: 100%;
+    height: fit-content;
+    padding: 3px 0px;
+    border: 2px solid;
+    border-radius: 50px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffa0;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+}

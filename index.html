@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=2, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="imgs/icon.png">
+</head>
+<body>
+    
+    <header class="header">
+
+        <div class="header-style">
+
+            <div class="logo">CURDS</div>
+
+            <div class="header-text">Product Mangment System</div>
+
+        </div>
+
+    </header>
+
+    <main class="main-con">
+
+        <div class="main-con-style">
+
+            <input type="text" class="title-input" id="title" placeholder="title">
+            <div class="prices">
+                <input type="number" inputmode="numeric" class="price-input" id="price" placeholder="Price" onkeyup="totalTrueCond();">
+                <input type="number" inputmode="numeric" class="tax-input" id="tax" placeholder="Tax (%)" onkeyup="totalTrueCond();">
+                <input type="number" inputmode="numeric" class="discount-input" id="discount" placeholder="Discount (%)" onkeyup="totalTrueCond();">
+            </div>
+            <div class="total-price" id="total-design">Total: (&nbsp;<div id="total"></div>&nbsp;)</div>
+            <input type="number" inputmode="numeric" class="count-input" id="count" placeholder="Count">
+            <input type="text" class="category-input" id="category" placeholder="Category">
+            <button class="create-btn" onclick="create();">Create</button>
+            <div class="search">
+                <input type="text" class="search-by-title" id="searchT" placeholder="Search by Title">
+                <input type="text" class="search-by-category" id="searchC" placeholder="Search by Category">
+            </div>
+            <div class="search-type">
+                <button class="search-type-title" onclick="searchT();">Search By Title</button>
+                <button class="search-type-category" onclick="searchC();">Search By Category</button>
+            </div>
+            <button class="delete-btn" id="delete-btn" onclick="deleteAll()">Delete All (&nbsp;<div id="objects-count"></div>&nbsp;)</button>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-style" id="non">
+
+            <table class="information">
+                
+                <tbody id="table-inf">
+
+                    <tr class="information-titles" id="const-inf-value">
+                        <td>ID</td>
+                        <td>Title</td>
+                        <td>Category</td>
+                        <td>Total Price</td>
+                        <td>Update</td>
+                        <td>delete</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script src="JavaScript/programming.js"></script>
+    <script src="JavaScript/styling.js"></script>
+
+</body>
+</html>
