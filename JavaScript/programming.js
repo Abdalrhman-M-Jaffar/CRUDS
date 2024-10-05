@@ -60,7 +60,7 @@ else{
 let dataOB = {};
 
 function Create(){
-    if(title.value.length > 0 && price.value.length > 0 && taxes.value.length > 0 && discount.value.length > 0 && count.value.length > 0 && count.value > 100 && categroy.value.length > 0){
+    if(title.value.length > 0 && price.value.length > 0 && taxes.value.length > 0 && discount.value.length > 0 && count.value.length > 0 && categroy.value.length > 0){
         dataOB = {
             title: title.value.toLowerCase(),
             price: price.value,
