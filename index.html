@@ -24,46 +24,62 @@
     <main class="main-con">
 
         <div class="main-con-style">
+            
+            <!-- title of the order -->
+            <input type="text" class="title-input" placeholder="Title" id="title">
 
-            <input type="text" class="title-input" id="title" placeholder="title">
             <div class="prices">
-                <input type="number" inputmode="numeric" class="price-input" id="price" placeholder="Price" onkeyup="totalTrueCond();">
-                <input type="number" inputmode="numeric" class="tax-input" id="tax" placeholder="Tax (%)" onkeyup="totalTrueCond();">
-                <input type="number" inputmode="numeric" class="discount-input" id="discount" placeholder="Discount (%)" onkeyup="totalTrueCond();">
+                
+                <!-- price input -->
+                <input type="number" inputmode="numeric" class="price-input" placeholder="Price" id="price" onkeyup="TotalPrice();">
+                
+                <!-- taxes input -->
+                <input type="number" inputmode="numeric" class="tax-input" placeholder="Taxes (%)" id="taxes" onkeyup="TotalPrice();">
+                
+                <!-- discount input -->
+                <input type="number" inputmode="numeric" class="discount-input" placeholder="Discount (%)" id="discount" onkeyup="TotalPrice();">
+
             </div>
-            <div class="total-price" id="total-design">Total: (&nbsp;<div id="total"></div>&nbsp;)</div>
-            <input type="number" inputmode="numeric" class="count-input" id="count" placeholder="Count">
-            <input type="text" class="category-input" id="category" placeholder="Category">
-            <button class="create-btn" onclick="create();">Create</button>
+            
+            <!-- Total Price of the order -->
+            <div class="total-price" id="total-price"></div>
+            
+            <!-- count input -->
+            <input type="number" inputmode="numeric" class="count-input" placeholder="Count" id="count">
+            
+            <!-- category input -->
+            <input type="text" class="category-input" placeholder="Category" id="category">
+            
+            <!-- crate btn -->
+            <button class="create-btn" id="create-btn" onclick="Create();">Create</button>
+            
+            <!-- Search input -->
             <div class="search">
-                <input type="text" class="search-by-title" id="searchT" placeholder="Search by Title">
-                <input type="text" class="search-by-category" id="searchC" placeholder="Search by Category">
+                <input type="text" class="search-by-title" id="search" placeholder="Search" onkeyup="searchForE(this.value);">
             </div>
+
+            <!-- Search type btns -->
             <div class="search-type">
-                <button class="search-type-title" onclick="searchT();">Search By Title</button>
-                <button class="search-type-category" onclick="searchC();">Search By Category</button>
+                <button class="search-type-title" id="searchByTitle">Search By Title</button>
+                <button class="search-type-category" id="searchByCategory">Search By Category</button>
             </div>
-            <button class="delete-btn" id="delete-btn" onclick="deleteAll()">Delete All (&nbsp;<div id="objects-count"></div>&nbsp;)</button>
+            
+            <!-- delete btn -->
+            <button class="delete-btn" id="deletebtn" onclick="deleteAll();"></button>
+
         </div>
 
     </main>
 
     <footer class="footer">
 
-        <div class="footer-style" id="non">
+        <div class="footer-style">
 
             <table class="information">
-                
-                <tbody id="table-inf">
 
-                    <tr class="information-titles" id="const-inf-value">
-                        <td>ID</td>
-                        <td>Title</td>
-                        <td>Category</td>
-                        <td>Total Price</td>
-                        <td>Update</td>
-                        <td>delete</td>
-                    </tr>
+                <tbody id="newE">
+
+
 
                 </tbody>
 

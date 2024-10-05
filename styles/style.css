@@ -128,6 +128,10 @@ body{
     transition: all .5s;
 }
 
+.total-price::before{
+    content: 'Total: $';
+}
+
 .count-input{
     margin-top: 10px;
 }
@@ -161,16 +165,7 @@ body{
     transform:  translateY(2px);
 }
 
-.search-by-title{
-    opacity: 1;
-    z-index: 99;
-}
 
-.search-by-category{
-    opacity: 0;
-    margin-top: -50px;
-    z-index: 98;
-}
 
 .search-type{
     display: flex;
@@ -253,35 +248,34 @@ body{
 }
 
 .information{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    font-family: b-f;
+    border: 1px solid white;
+    border-bottom: 0px solid white;
+    border-right: 0px solid white; 
 }
 
-.information-titles{
+#newE tr td{
+    font-size: 16px;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+#newE .basic-data td{
     font-size: 20px;
     font-weight: bold;
     font-family: h-f;
 }
 
-.information td{
-    text-align: center;
-    padding: 5px 5px;
-}
-
 tr button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: b-f;
     width: 100%;
-    height: 40px;
+    height: 35px;
     border: 2px solid;
     border-radius: 50px;
     color: #333;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     background-color: #ffffa0;
     cursor: pointer;
@@ -371,4 +365,136 @@ tr button:active{
     transition: all .5s;
 }
 
+}
+
+@media (max-width:660px) {
+
+#newE tr td{
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+#newE .basic-data td{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: h-f;
+}
+
+tr button{
+    font-family: b-f;
+    width: 70px;
+    height: 35px;
+    border: 2px solid;
+    border-radius: 50px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #ffffa0;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+    
+}
+
+@media (max-width:660px) {
+
+#newE tr td{
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+#newE .basic-data td{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: h-f;
+}
+
+tr button{
+    font-family: b-f;
+    width: 70px;
+    height: 35px;
+    border: 2px solid;
+    border-radius: 50px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #ffffa0;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+    
+}
+
+@media (max-width:450px) {
+
+#newE tr td{
+    font-size: 12px;
+    text-align: center;
+    padding: 3px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+#newE .basic-data td{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: h-f;
+}
+
+tr button{
+    font-family: b-f;
+    width: 55px;
+    height: 35px;
+    border: 2px solid;
+    border-radius: 50px;
+    color: #333;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: #ffffa0;
+    cursor: pointer;
+    transition: all .5s;
+}
+    
+        
+}
+
+@media (max-width:350px) {
+
+#newE tr td{
+    font-size: 10px;
+    text-align: center;
+    padding: 2px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+#newE .basic-data td{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: h-f;
+}
+
+tr button{
+    font-family: b-f;
+    width: 45px;
+    height: 35px;
+    border: 2px solid;
+    border-radius: 50px;
+    color: #333;
+    font-size: 8px;
+    font-weight: bold;
+    background-color: #ffffa0;
+    cursor: pointer;
+    transition: all .5s;
+}
+    
+        
 }
